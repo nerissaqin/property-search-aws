@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Suburb Performance Statistics</title>
+</head>
+
+<body>
+        <div class="col-sm-6 col-sm-offset-3">
+
+            <h1><span class="fa fa-sign-in"></span> Top Search Suburb</h1>
+            <table>
+                <tr>
+                  <th>Suburb</th>
+                  <th>State</th>
+                  <th>Count</th>
+                </tr>
+                <% for(var i=0; i < data.result.length; i++) { %>
+                    <tr>
+                        <td><%= data.result[i].SearchSuburb %></td>
+                        <td><%= data.result[i].SearchState %></td>
+                        <td><%= data.result[i]["count(1)"] %></td>
+                    </tr>
+                <% } %>
+              </table>
+            <hr>
+        </div>
+
+</body>
+
+</html>

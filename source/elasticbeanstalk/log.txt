@@ -1,0 +1,53 @@
+{
+    "repositories": [
+        {
+            "repositoryArn": "arn:aws:ecr:us-east-1:679291055404:repository/realestate",
+            "registryId": "679291055404",
+            "repositoryName": "realestate",
+            "repositoryUri": "679291055404.dkr.ecr.us-east-1.amazonaws.com/realestate",
+            "createdAt": "2022-04-09T17:04:24+10:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        }
+    ]
+}
+{
+    "ApplicationVersion": {
+        "ApplicationVersionArn": "arn:aws:elasticbeanstalk:us-east-1:679291055404:applicationversion/my-awesome-application/17",
+        "ApplicationName": "my-awesome-application",
+        "VersionLabel": "17",
+        "SourceBundle": {
+            "S3Bucket": "huipinelasticbeanstalkcodeassignment1",
+            "S3Key": "realestate.17.zip"
+        },
+        "DateCreated": "2022-04-19T15:51:50.176000+00:00",
+        "DateUpdated": "2022-04-19T15:51:50.176000+00:00",
+        "Status": "UNPROCESSED"
+    }
+}
+{
+    "EnvironmentName": "my-awesome-environment",
+    "EnvironmentId": "e-kyiezdez3f",
+    "ApplicationName": "my-awesome-application",
+    "VersionLabel": "17",
+    "SolutionStackName": "64bit Amazon Linux 2 v3.4.13 running Docker",
+    "PlatformArn": "arn:aws:elasticbeanstalk:us-east-1::platform/Docker running on 64bit Amazon Linux 2/3.4.13",
+    "EndpointURL": "awseb-e-k-AWSEBLoa-NIMP0GCQ4T43-1406615046.us-east-1.elb.amazonaws.com",
+    "CNAME": "my-awesome-environment.eba-ap3fiinm.us-east-1.elasticbeanstalk.com",
+    "DateCreated": "2022-04-19T04:08:13.038000+00:00",
+    "DateUpdated": "2022-04-19T15:51:52.472000+00:00",
+    "Status": "Updating",
+    "AbortableOperationInProgress": true,
+    "Health": "Grey",
+    "Tier": {
+        "Name": "WebServer",
+        "Type": "Standard",
+        "Version": "1.0"
+    },
+    "EnvironmentArn": "arn:aws:elasticbeanstalk:us-east-1:679291055404:environment/my-awesome-application/my-awesome-environment"
+}

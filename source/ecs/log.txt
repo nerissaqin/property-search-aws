@@ -1,0 +1,18 @@
+{
+    "repositories": [
+        {
+            "repositoryArn": "arn:aws:ecr:us-east-1:679291055404:repository/realestate-admin",
+            "registryId": "679291055404",
+            "repositoryName": "realestate-admin",
+            "repositoryUri": "679291055404.dkr.ecr.us-east-1.amazonaws.com/realestate-admin",
+            "createdAt": "2022-04-19T14:30:30+10:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Suburb Performance Statistics</title>
+</head>
+
+<body>
+        <div class="col-sm-6 col-sm-offset-3">
+
+            <h1><span class="fa fa-sign-in"></span> Suburb Performance Statistics</h1>
+
+
+
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label>Suburb</label>
+                    <input type="text" class="form-control" name="suburb" value="<%= data.suburb %>">
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" class="form-control" name="state" value="<%= data.state %>">
+                </div>
+
+                <button type="submit" class="btn btn-warning btn-lg">Get Data</button>
+            </form>
+            <hr>
+        </div>
+
+        <% if(data.errMessage){ %>
+            <div class="col-sm-6 col-sm-offset-3">
+                <p><%= data.errMessage %></p>
+            </div>
+        <% } else { %>
+            <div class="col-sm-6 col-sm-offset-3">
+                <p>The data is house only and the span is 12 months</p>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h4 class="card-title">date:  <%= data.month %>/<%= data.year %></h4>
+                        <h4 class="card-title">Median Sold Price: $<%= data.values.medianSoldPrice %></h4>
+                        <h4 class="card-title">Number Sold: <%= data.values.numberSold %></h4>
+                        <h4 class="card-title">Highest Sold Price: $<%= data.values.highestSoldPrice %></h4>
+                        <h4 class="card-title">Lowest Sold Price: $<%= data.values.lowestSoldPrice %></h4>
+                        <h4 class="card-title">Median Sale Listing Price: $<%= data.values.medianSaleListingPrice %></h4>
+                        <h4 class="card-title">Number Sale Listing: <%= data.values.numberSaleListing %></h4>
+                        <h4 class="card-title">Highest Sale Listing Price: $<%= data.values.highestSaleListingPrice %></h4>
+                        <h4 class="card-title">Lowest Sale Listing Price: $<%= data.values.lowestSaleListingPrice %></h4>
+                        <h4 class="card-title">Auction Number Auctioned: <%= data.values.auctionNumberAuctioned %></h4>
+                        <h4 class="card-title">Auction Number Sold: <%= data.values.auctionNumberSold %></h4>
+                        <h4 class="card-title">Days On Market: <%= data.values.daysOnMarket %></h4>
+                        <h4 class="card-title">Median Rent Listing Price: $<%= data.values.medianRentListingPrice %></h4>
+                        <h4 class="card-title">Number Rent Listing: <%= data.values.numberRentListing %></h4>
+                        <h4 class="card-title">Highest Rent Listing Price: $<%= data.values.highestRentListingPrice %></h4>
+                        <h4 class="card-title">Lowest Rent Listing Price: $<%= data.values.lowestRentListingPrice %></h4>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+
+</body>
+
+</html>
